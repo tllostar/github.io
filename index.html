@@ -2,16 +2,171 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi web</title>
-</head>
-<body>
-  <h1>Nochebuena 2025</h1>
-  <p>Hola familia! Nos vemos esta noche a las 20:30 para celebrar la Navidad.</p>
+  <title>Feliz Navidad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <iframe 
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.71,40.41,-3.69,40.42"
-    width="100%" 
-    height="400">
-  </iframe>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --verde-navidad: #0f5132;
+      --rojo-navidad: #b02a37;
+      --dorado: #d4af37;
+      --fondo: #f7f9f8;
+      --texto: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffffff, var(--fondo));
+      color: var(--texto);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--verde-navidad), #146c43);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "❄️ ❄️ ❄️";
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.3;
+      font-size: 1.2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: -60px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--verde-navidad);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2 span {
+      color: var(--rojo-navidad);
+    }
+
+    .card p {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .mapa {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--dorado);
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--rojo-navidad);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎄 Feliz Navidad 🎄</h1>
+    <p>Un lugar especial para compartir buenos deseos, momentos únicos y un poco de magia navideña.</p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>✨ Un mensaje <span>especial</span></h2>
+      <p>
+        Que estas fiestas estén llenas de calma, ilusión y buenos momentos.
+        Este pequeño espacio web es un recordatorio de que lo importante
+        no es el lugar, sino las personas con las que lo compartimos.
+      </p>
+      <p>
+        Disfruta del camino, desconecta un poco del ruido y celebra lo esencial.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>📍 Nuestro lugar en el mundo</h2>
+      <p>
+        Aquí tienes un punto especial en el mapa. Puede ser un destino,
+        un recuerdo o simplemente un sitio que te haga sonreír.
+      </p>
+
+      <div class="mapa">
+        <iframe 
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-3.7100%2C40.4100%2C-3.6900%2C40.4200&layer=mapnik">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Hecho con <span>❤</span> y espíritu navideño · © 2025
+  </footer>
+
 </body>
 </html>
